@@ -1,2 +1,2 @@
-# The Hungry Bear ʕ•ᴥ•ʔ
+# The Hungry Bear 🐻🍴
 Restaurant Review Website
