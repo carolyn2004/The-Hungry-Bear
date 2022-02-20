@@ -36,5 +36,16 @@
 
 - Able to toggle password visibility for sign up, profile and login page.
 
+# Home Page 
+![Home Page]()
+
+# Review Page
+
+
+# Profile Page
+
+# Sign-Up page
+
+# Login Page
 
 
