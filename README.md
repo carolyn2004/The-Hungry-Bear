@@ -47,7 +47,7 @@
 
 # Profile Page
 ![dd668f40-e1b5-4fc9-9884-49fd8a9cf1a8](https://user-images.githubusercontent.com/100062535/154891583-963a89c4-1ef8-410e-b862-28e028ce2c06.jpg)
-# Sign-Up page
+# Sign-up Page
 ![fd29ea42-d714-4925-90df-1748d643dc27](https://user-images.githubusercontent.com/100062535/154891862-fd26a3c9-676d-4c63-acb0-e64850a74874.jpg)
 # Login Page
 ![0de5680c-357f-41c3-8241-42c40748134c](https://user-images.githubusercontent.com/100062535/154891871-01c285e7-b636-473f-9ae0-530aee457a61.jpg)
