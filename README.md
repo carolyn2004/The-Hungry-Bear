@@ -36,7 +36,7 @@
 
 - Able to toggle password visibility for sign up, profile and login page.
 
-Link to original UX design created on Adobe XD:
+# Original UX design created on Adobe XD
 - https://drive.google.com/file/d/1hZjYs8oE6a-7dlnffwYrsoUQ_9OZgpGL/view?usp=sharing
 
 # Home Page 
