@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Restaurant Review Website </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
+    <link rel="icon" type="image/x-icon" href="9a73688c-add1-4889-96e2-9fae71cec9dd.jfif">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body onload="viewProfile()">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <a class="navbar-brand">
+                <div class="logo-image">
+                    <img src="9a73688c-add1-4889-96e2-9fae71cec9dd.jfif" width="40" height="40" class="img-fluid">
+                </div>
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">THE HUNGRY BEAR</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="Cuisine"></span> Cuisines
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"> Malay</a>
+                        <a class="dropdown-item"> Indian</a>
+                        <a class="dropdown-item"> Chinese</a>
+                        <a class="dropdown-item"> Western</a>
+                        <a class="dropdown-item"> Japanese</a>
+                    </div>
+
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="Region"></span> Region
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item">North</a>
+                        <a class="dropdown-item">South</a>
+                        <a class="dropdown-item">East</a>
+                        <a class="dropdown-item">West</a>
+                    </div>
+
+
+            </ul>
+            </li>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="favorites.html"><span class="glyphicon glyphicon-bookmark"></span> Favourites</a></li>
+                <li><a onclick="logOut()" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+            </ul>
+
+            </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container tab">
+        <div class="row">
+            <button id="btn_profile" class="btn col tab-link" style="background-color: #D3C7BA;"
+                style="padding: 0;" href="#">
+                Profile
+            </button>
+        </div>
+    </div>
+
+    <div id="tab_profile" class="container featured-box tab-content" style=" display: block">
+        <!-- Basic Info -->
+        <h3> Basic Information </h3>
+        <div class="row profile-border">
+            <div class="col-4" style="text-align: center;">
+                <img id="profile_image" src="avatar.png"
+                    style="border-radius: 50%; object-fit: cover; width: 300px; height: 300px;">
+            </div>
+            <div class="container col-8">
+                <!-- FN, LN -->
+                <div class="row">
+                    <div class="col">
+                        <label for="user_fn">First Name</label><br>
+                        <input id="user_fn" type="text" style="width: 100%; " disabled>
+                    </div>
+
+                    <div class="col">
+                        <label for="user_ln">Last Name</label><br>
+                        <input id="user_ln" type="text" style="width: 100%;" disabled>
+                    </div>
+                </div>
+                <!-- Username, Gender -->
+                <div class="row">
+                    <div class="col">
+                        <label for="user_un">Username</label><br>
+                        <input id="user_un" type="text" style="width: 100%;" disabled>
+                    </div>
+
+                    <div class="col">
+
+                        <label for="user_gender">Gender</label><br>
+                        <input id="user_gender" type="text" style="width: 100%;" disabled>
+
+                    </div>
+                   
+                </div>
+                
+                <form >
+                <!-- Address -->
+                <div class="row" style="padding-left: 2.5%; padding-right: 2.5%;">
+                    <label for="user_address">Address</label><br>
+                    <input id="user_address" type="text" onkeyup="EnableUpdate()"style="width: 100%;">
+                </div>
+                <!-- Email, Mobile Number -->
+                <div class="row">
+                    <div class="col">
+                        <label for="user_email">Email</label><br>
+                        <input id="user_email" type="email"onkeyup="EnableUpdate()" style="width: 100%;">
+                    </div>
+
+                    <div class="col">
+                        <label for="user_number">Mobile Number</label><br>
+                        <input id="user_number" type="text" onkeyup="EnableUpdate()" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="password_confirm">Password</label><br>
+                        <input id="password_confirm" onkeyup="EnableUpdate()"; type="password" style="width: 50%;" ><br><br>
+                        <input type="checkbox" onclick="showPassword()">Show Password<br><br>
+                    </div>
+                </div> <br>
+                <p> Please ensure all fields are filled! </p>
+
+                <br>
+                <button type="button"  id="btn_details" ; class="btn btn-danger"
+                    style="background-color: #E2757F; border-color: #707070; float:right;"  onclick="updateProfile();">
+                    Save Changes </button>
+
+            </div>
+        </div>
+ <!-- Delete Account -->
+ 
+ <h3 style="padding-top: 2%;"> Delete Account </h3>
+ <p>Are you sure you want to delete your account?</p><br>
+     <div class="col"> 
+         <button id="btn_delete" class="btn btn-danger" style="background-color: #E2757F; border-color: #707070; margin-left: -20px;" onclick="deleteAccount()"> Delete Account </button>
+   
+ 
+ 
+    </div>
+</div><br><br>
+
+
+        <script>
+            function showPassword() {
+                var x = document.getElementById("password_confirm");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+          
+            document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('btn_details').disabled = "true";
+    });
+    function EnableUpdate() {
+        var password_confirm = document.getElementById('password_confirm').value;
+        var user_address = document.getElementById('user_address').value;
+        var user_number = document.getElementById('user_number').value;
+        var user_email = document.getElementById('user_email').value;
+        console.log(password_confirm, user_address,user_number,user_email);
+        if (localStorage.length === 0||password_confirm === "" || user_address === "" || user_number==="" || user_email === "") {
+            document.getElementById('btn_details').disabled = true;
+        } else {
+        		document.getElementById('btn_details').disabled = false;
+        }
+    }
+ 
+    
+           
+        </script>
+
+</body>
+
+</html>

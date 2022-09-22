@@ -1,0 +1,23 @@
+.logo-image{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 3px;
+}
+.column{
+    float: left;
+    width: 20%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.submit-button{
+    padding-left: 50px;
+}
+.favourites-page{
+    font-size: 500px;
+}
